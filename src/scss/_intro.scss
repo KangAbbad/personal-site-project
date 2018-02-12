@@ -1,0 +1,147 @@
+#intro-wrap_name {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+
+    .intro_name {
+        font-family: $font--exo;
+        font-size: 15px;
+        font-weight: 900;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+#intro-wrap_profile {
+    position: absolute;
+    width: 100vh;
+    left: 50px;
+    transform-origin: top left;
+    transform: rotate(-90deg) translate3d(-100%,0,0);
+
+    .intro_profile {
+        cursor: default;
+
+        li {
+            display: inline-block;
+            color: $text--gray;
+            font-family: $font--dosis;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+    
+        .intro_profile_left, .intro_profile_right {
+            position: absolute;
+            top: 0;
+        }
+    
+        .intro_profile_left {
+            left: 6.5vh;
+        }
+    
+        .intro_profile_center {
+            position: absolute;
+            left: 36vh;
+        }
+    
+        .intro_profile_right {
+            right: 6.5vh;
+        }
+    }
+}
+
+#intro-wrap_email {
+    position: absolute;
+    top: 38vh;
+    right: 70px;
+    transform-origin: top right;
+    transform: rotate(90deg) translate3d(100%,0,0);
+
+    a {
+        display: inline-block;
+        position: relative;
+        color: $text--gray;
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &:hover{
+            color: $text--white;
+        }
+    }
+}
+
+#intro-wrap_about {
+    position: absolute;
+    width: 50vw;
+    top: 50vh;
+    left: 30vh;
+
+    .intro_about--hollo {
+        position: relative;
+
+        .line--text {
+            position: absolute;
+            left: 60px;
+            bottom: 30px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 2.5;
+            text-transform: uppercase;
+
+            &::before {
+                content: '';
+                background: #fff;
+                width: 40px;
+                height: 3px;
+                position: absolute;
+                left: 0;
+                top: 40%;
+                margin-left: -55px;
+            }
+        }
+    }
+
+    .intro_about--text {
+        margin-bottom: 90px;
+
+        .h-desc--1 {
+            font-size: 35px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            color: $text--greenqodr;
+            margin-bottom: 10px;
+        }
+        .h-desc--2 {
+            font-size: 35px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+        }
+        .h-desc--3 {
+            font-size: 35px;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+    }
+
+    .intro_about--skill {
+        cursor: default;
+
+        .intro_skill {
+            li {
+                display: inline-block;
+                color: $text--white;
+                font-family: $font--exo;
+                font-size: 15px;
+                font-weight: 500;
+                text-decoration: none;
+                padding-right: 30px;
+            }
+        }
+    }
+}
