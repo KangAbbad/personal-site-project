@@ -1,5 +1,6 @@
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
+import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useMotionValue } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
@@ -117,6 +118,7 @@ const ArticlesPage = () => {
         <title>Articles | kangabbad</title>
         <meta name="description" content="Hi it's me, Kang Abbad!" />
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
           <AnimatedText

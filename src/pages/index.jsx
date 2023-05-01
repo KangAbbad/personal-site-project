@@ -6,6 +6,7 @@ import Layout from "@/components/Layout.jsx";
 import AnimatedText from "@/components/AnimatedText";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
         <title>kangabbad.com</title>
         <meta name="description" content="Welcome to kangabbad.com!" />
       </Head>
+      <TransitionEffect />
       <main className="flex items-center min-h-screen w-full text-dark dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col">
