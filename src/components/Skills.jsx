@@ -4,11 +4,10 @@ const Skill = ({ name, x, y }) => {
   return (
     <motion.div
       initial={{ x: 0, y: 0 }}
-      whileInView={{ x, y }}
-      transition={{ duration: 1.5 }}
+      whileInView={{ x, y, transition: { duration: 1.5 } }}
       whileHover={{ scale: 1.05 }}
       viewport={{ once: true }}
-      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute"
+      className="flex items-center justify-center rounded-full font-semibold bg-dark dark:bg-light text-light dark:text-dark py-3 px-6 shadow-dark cursor-pointer absolute"
     >
       {name}
     </motion.div>
@@ -19,7 +18,7 @@ const Skills = () => {
   return (
     <>
       <h2 className="font-bold text-8xl mt-64 w-full text-center">Skills</h2>
-      <div className="flex items-center justify-center rounded-full relative h-screen w-full bg-circularLight mt-10">
+      <div className="flex items-center justify-center rounded-full relative h-screen w-full bg-circularLight dark:bg-circularDark mt-10">
         <Skill name="Web" />
         <Skill name="HTML" x="-28vw" y="2vw" />
         <Skill name="CSS" x="-5vw" y="-8vw" />

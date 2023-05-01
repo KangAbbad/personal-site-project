@@ -21,12 +21,12 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
           <a
             href={companyLink}
             target="_blank"
-            className="text-primary capitalize"
+            className="text-primary dark:text-primaryDark capitalize"
           >
             @{company}
           </a>
         </h3>
-        <span className="capitalize font-medium text-dark/75">
+        <span className="capitalize font-medium text-dark/75 dark:text-light/75">
           {time} | {address}
         </span>
         <p className="font-medium w-full">{work}</p>
@@ -49,7 +49,7 @@ const Experience = () => {
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-1 w-[4px] h-full bg-dark origin-top"
+          className="absolute left-9 top-1 w-[4px] h-full bg-dark dark:bg-light origin-top"
         />
         <ul>
           {[0, 1, 2].map((item) => (
