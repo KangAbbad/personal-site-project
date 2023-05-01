@@ -7,9 +7,12 @@ import {
   DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
+  MoonIcon,
   PinterestIcon,
+  SunIcon,
   TwitterIcon,
 } from "./Icons.jsx";
+import useThemeSwithcer from "@/hooks/useThemeSwithcer.js";
 
 const CustomLink = ({ href = "", title = "", className = "" }) => {
   const router = useRouter();
@@ -17,7 +20,7 @@ const CustomLink = ({ href = "", title = "", className = "" }) => {
     <Link href={href} className={`relative group ${className}`}>
       {title}
       <span
-        className={`absolute -bottom-0.5 left-0 inline-block bg-dark group-hover:w-full transition-[width] ease duration-300 h-[2px] ${
+        className={`absolute -bottom-0.5 left-0 inline-block bg-dark dark:bg-light group-hover:w-full transition-[width] ease duration-300 h-[2px] ${
           router.asPath === href ? "w-full" : "w-0"
         }`}
       >
@@ -28,8 +31,9 @@ const CustomLink = ({ href = "", title = "", className = "" }) => {
 };
 
 const NavBar = () => {
+  const [mode, setMode] = useThemeSwithcer();
   return (
-    <header className="flex items-center justify-between w-full font-medium px-32 py-8">
+    <header className="flex items-center justify-between w-full font-medium dark:text-light px-32 py-8">
       <nav className="flex items-center gap-6">
         <CustomLink href="/" title="Home" />
         <CustomLink href="/about" title="About" />
@@ -82,6 +86,18 @@ const NavBar = () => {
         >
           <DribbbleIcon />
         </motion.a>
+        <button
+          className={`flex items-center justify-center rounded-full p-1 ${
+            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+          }`}
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+        >
+          {mode === "dark" ? (
+            <SunIcon className="fill-dark" />
+          ) : (
+            <MoonIcon className="fill-dark" />
+          )}
+        </button>
       </nav>
       <div className="absolute top-2 left-[50%] translate-x-[-50%]">
         <Logo />
