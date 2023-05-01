@@ -41,7 +41,8 @@ const MovieImg = ({ title, img, link }) => {
         alt={title}
         height="0"
         width="0"
-        sizes="100vw"
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
@@ -89,7 +90,8 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
           alt={title}
           height="0"
           width="0"
-          sizes="100vw"
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
           className="h-auto w-full"

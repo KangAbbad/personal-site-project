@@ -7,7 +7,7 @@ import AnimatedText from "@/components/AnimatedText";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <>
       <Head>
@@ -23,7 +23,8 @@ export default function HomePage() {
                 alt="kangabbad"
                 height="0"
                 width="0"
-                sizes="100vw"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                 className="w-full h-full"
               />
             </div>
@@ -72,4 +73,6 @@ export default function HomePage() {
       </main>
     </>
   );
-}
+};
+
+export default HomePage;

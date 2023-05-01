@@ -73,7 +73,8 @@ const AboutPage = () => {
                 alt="kangabbad"
                 height="0"
                 width="0"
-                sizes="100vw"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                 className="h-full w-full"
               />
             </div>
