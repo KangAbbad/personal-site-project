@@ -1,9 +1,12 @@
 import AnimatedText from "@/components/AnimatedText";
 import { GithubIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+
+const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -14,12 +17,14 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image
+        <FramerImage
           src={img}
           alt={title}
           height="0"
           width="0"
           sizes="100vw"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
           className="h-full w-full"
         />
       </Link>
@@ -59,12 +64,14 @@ const Project = ({ type, title, summary, img, link, github }) => {
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image
+        <FramerImage
           src={img}
           alt={title}
           height="0"
           width="0"
           sizes="100vw"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
           className="h-full w-full"
         />
       </Link>
