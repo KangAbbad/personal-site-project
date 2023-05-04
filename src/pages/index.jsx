@@ -2,11 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import Layout from "@/components/Layout.jsx";
-import AnimatedText from "@/components/AnimatedText";
-import { LinkArrow } from "@/components/Icons";
-import HireMe from "@/components/HireMe";
-import TransitionEffect from "@/components/TransitionEffect";
+import {
+  HeroTitle,
+  HireMeButton,
+  Layout,
+  TransitionEffect,
+} from "@/components/shared-components";
+import { ExternalLinkIcon } from "@/assets";
 
 const HomePage = () => {
   return (
@@ -31,7 +33,7 @@ const HomePage = () => {
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
-              <AnimatedText
+              <HeroTitle
                 text="Turning Vision Into Reality With Code And Design."
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
@@ -48,7 +50,7 @@ const HomePage = () => {
                   download
                   className="flex items-center bg-dark dark:bg-light text-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light border-2 border-solid border-transparent hover:border-dark md:p-2 md:px-4 md:text-base"
                 >
-                  Resume <LinkArrow className="w-6 ml-1" />
+                  Resume <ExternalLinkIcon className="w-6 ml-1" />
                 </Link>
                 <Link
                   href="mailto:naufalabbad9@gmail.com"
@@ -61,7 +63,7 @@ const HomePage = () => {
             </div>
           </div>
         </Layout>
-        <HireMe />
+        <HireMeButton />
         <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
           <Image
             src="/images/svgs/miscellaneous_icons_1.svg"

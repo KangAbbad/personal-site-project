@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Layout from "./Layout";
+import { Layout } from "@/components/shared-components";
 
 const Footer = () => {
   return (

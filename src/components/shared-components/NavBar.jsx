@@ -2,6 +2,8 @@ import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
 import Logo from "./Logo.jsx";
+import useThemeSwithcer from "@/hooks/useThemeSwithcer.js";
+import { useState } from "react";
 import {
   DribbbleIcon,
   GithubIcon,
@@ -10,9 +12,7 @@ import {
   PinterestIcon,
   SunIcon,
   TwitterIcon,
-} from "./Icons.jsx";
-import useThemeSwithcer from "@/hooks/useThemeSwithcer.js";
-import { useState } from "react";
+} from "@/assets";
 
 const CustomLink = ({
   href = "",

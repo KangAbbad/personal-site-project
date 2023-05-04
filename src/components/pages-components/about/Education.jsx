@@ -1,8 +1,8 @@
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
-import LiIcon from "./LiIcon";
+import { DotTimeline } from "@/components/shared-components";
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({ type, time, place, info }) => {
   const ref = useRef(null);
 
   return (
@@ -10,32 +10,25 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
       ref={ref}
       className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
     >
-      <LiIcon reference={ref} />
+      <DotTimeline reference={ref} />
       <motion.div
         initial={{ y: 0 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
-          {position}&nbsp;
-          <a
-            href={companyLink}
-            target="_blank"
-            className="text-primary dark:text-primaryDark capitalize"
-          >
-            @{company}
-          </a>
+          {type}
         </h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
-          {time} | {address}
+          {time} | {place}
         </span>
-        <p className="font-medium w-full md:text-sm">{work}</p>
+        <p className="font-medium w-full md:text-sm">{info}</p>
       </motion.div>
     </li>
   );
 };
 
-const Experience = () => {
+const Education = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -44,7 +37,7 @@ const Experience = () => {
   return (
     <div className="my-64">
       <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-        Experiences
+        Education
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
         <motion.div
@@ -55,12 +48,10 @@ const Experience = () => {
           {[0, 1, 2].map((item) => (
             <Details
               key={item}
-              address="Mountain View, CA"
-              company="Google"
-              companyLink="google.com"
-              position="Software Engineer"
-              time="2022-Present"
-              work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+              type="Bachelor Of Science In Computer Science"
+              place="Massachusetts Institute Of Technology (MIT)"
+              time="2016-2020"
+              info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."
             />
           ))}
         </ul>
@@ -69,4 +60,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Education;

@@ -1,11 +1,9 @@
 import "@/styles/globals.css";
 import Head from "next/head";
 import { Montserrat } from "next/font/google";
-
-import NavBar from "@/components/NavBar.jsx";
-import Footer from "@/components/Footer.jsx";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import { Footer, NavBar } from "@/components/shared-components";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 

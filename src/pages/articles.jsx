@@ -1,11 +1,13 @@
-import AnimatedText from "@/components/AnimatedText";
-import Layout from "@/components/Layout";
-import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useMotionValue } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import {
+  HeroTitle,
+  Layout,
+  TransitionEffect,
+} from "@/components/shared-components";
 
 const FramerImage = motion(Image);
 
@@ -121,7 +123,7 @@ const ArticlesPage = () => {
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText
+          <HeroTitle
             text="Words Can Change The World"
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />

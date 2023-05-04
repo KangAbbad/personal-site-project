@@ -1,6 +1,6 @@
 import { motion, useScroll } from "framer-motion";
 
-const LiIcon = ({ reference }) => {
+const DotTimeline = ({ reference }) => {
   const { scrollYProgress } = useScroll({
     target: reference,
     offset: ["center end", "center center"],
@@ -40,4 +40,4 @@ const LiIcon = ({ reference }) => {
   );
 };
 
-export default LiIcon;
+export default DotTimeline;
