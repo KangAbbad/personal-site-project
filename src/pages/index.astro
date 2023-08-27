@@ -1,0 +1,88 @@
+---
+import '@fontsource-variable/exo-2';
+import '@fontsource-variable/anybody';
+import { ScrollForMoreButton } from '../components/CustomButton';
+import Layout from '../layouts/Layout.astro';
+
+const currentYear = new Date().getFullYear()
+---
+
+<Layout>
+  <div class="flex flex-col bg-[#202020] h-[90vh] sm:h-screen py-8 px-6">
+    <div class="flex gap-4">
+      <div class="flex-none">
+        <h1 class="text-white text-xs sm:text-sm font-bold">
+          Naufal Abbad.
+        </h1>
+      </div>
+      <div class="flex-1">
+        <div class="flex flex-col md:flex-row justify-end gap-2 sm:gap-4 md:gap-32">
+          <div>
+            <h1 class="text-white text-[10px] md:text-xs text-right">
+              FRONTEND DEVELOPER
+            </h1>
+            <h2 class="text-white text-[10px] md:text-xs text-right">
+              2019 - {currentYear}
+            </h2>
+          </div>
+          <div>
+            <h1 class="text-white text-[10px] md:text-xs text-right">
+              AVAILABLE FOR FREELANCE
+            </h1>
+            <h1 class="text-white text-[10px] md:text-xs text-right">
+              PROJECTS IN OCTOBER {currentYear}
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex md:justify-end md:pr-10 lg:pr-24 mt-auto sm:my-auto mb-20">
+      <div class="sm:w-[400px]">
+        <h1 id="intro-hero-title" class="text-white text-3xl">
+          Frontend Developer currently based in Surakarta, Indonesia
+        </h1>
+        <p class="text-white text-sm mt-4">
+          Currently working as independent.
+        </p>
+        <p class="text-white text-sm">
+          I create digital experiences and solve problems through Code.
+        </p>
+        <div class="flex gap-4 mt-4 md:mt-8">
+          <button class="border border-white rounded-full overflow-hidden hover:bg-white/10 active:bg-white/20 text-white text-center text-xs sm:text-sm w-[100px] py-2">
+            Let's Talk
+          </button>
+          <ScrollForMoreButton />
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between sm:justify-end md:justify-between gap-8">
+      <h6 class="text-white text-[10px] md:text-sm">
+        7°34'9.296 S, 110°49'42.412 E
+      </h6>
+      <div class="flex-1 sm:flex-none md:flex-1 flex items-center justify-end gap-16">
+        <h6 class="text-white text-[10px] md:text-sm hidden md:inline-block">
+          INSTAGRAM
+        </h6>
+        <h6 class="text-white text-[10px] md:text-sm hidden md:inline-block">
+          LINKEDIN
+        </h6>
+        <h6 class="text-white text-[10px] md:text-sm hidden md:inline-block">
+          GITHUB
+        </h6>
+        <h6 class="text-white text-[10px] md:text-sm">
+          @{currentYear}
+        </h6>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  body {
+    font-family: 'Exo 2 Variable', sans-serif;
+  }
+
+  #intro-hero-title {
+    font-family: 'Anybody Variable', sans-serif;
+  }
+</style>
