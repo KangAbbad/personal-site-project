@@ -595,6 +595,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/exo-2/-/exo-2-5.0.9.tgz#b1677fd5538a4f30e23d2d669a2bd7f86f915a5c"
   integrity sha512-9bJ8vU4V9hD1VO3OdWh+ekQw1IitMxXkD9XX92zccQ9YTYHNwhx2Nz/HeV+QdJiOlhMaIbdNabh8eSnNpPi28Q==
 
+"@fontsource/changa-one@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/changa-one/-/changa-one-5.0.8.tgz#ec48363b6f376977c5fd24bfb5846649e613bf49"
+  integrity sha512-w4q0jVtpQ6j++xjgOgvETyaMPbvhbq6Y4N70o5YIef5R2UfHazJZOi+IKh0JnMOdpryWJzgWaXKVczFF2oaQag==
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
